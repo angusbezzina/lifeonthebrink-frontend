@@ -16,6 +16,10 @@ const ContainerStyles = styled.div`
     props.flexDirection ? props.flexDirection : "column"};
   justify-content: ${(props) => props.justify ? props.justify : "flex-start"};
   align-items: ${(props) => props.align ? props.align : "flex-start"};
+
+  .content {
+    margin: 2rem 0 4rem;
+  }
 `;
 
 export default ContainerStyles;

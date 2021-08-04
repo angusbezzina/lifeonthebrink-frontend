@@ -44,12 +44,15 @@ const Header = () => {
           </a>
         </Link>
         <NavStyles active={active}>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
           <Link href="/about-us">
-            <a>About Us</a>
+            <a>About</a>
           </Link>
-          <Link href="/blog">
+          {/* <Link href="/blog">
             <a>Blog</a>
-          </Link>
+          </Link> */}
         </NavStyles>
       </ContainerStyles>
     </HeaderStyles>

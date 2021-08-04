@@ -4,6 +4,10 @@ const FooterStyles = styled.footer`
   width: 100%;
   max-width: 1200px;
   padding: 1.25rem 0;
+
+  h4 {
+    margin-top: 0;
+  }
 `;
 
 export default FooterStyles;

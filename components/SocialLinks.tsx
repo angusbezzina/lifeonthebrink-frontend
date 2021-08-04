@@ -11,10 +11,15 @@ import SocialLinkStyles from "styles/SocialLinkStyles";
 const SocialLinks = () => {
   return (
     <SocialLinkStyles>
-      <a href="" title="instagram" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://www.instagram.com/lifeonthebrinkpodcast/"
+        title="instagram"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FontAwesomeIcon icon={faInstagram} />
       </a>
-      <a href="" title="twitter" target="_blank" rel="noopener noreferrer">
+      {/* <a href="" title="twitter" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faTwitter} />
       </a>
       <a href="" title="facebook" target="_blank" rel="noopener noreferrer">
@@ -22,7 +27,7 @@ const SocialLinks = () => {
       </a>
       <a href="" title="youtube" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faYoutube} />
-      </a>
+      </a> */}
     </SocialLinkStyles>
   );
 };

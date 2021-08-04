@@ -23,22 +23,23 @@ export default function Home({ allEpisodes }: HomePageProps) {
       <Meta />
       <Header />
 
-      <Hero title="Life: on the brink" backgroundImage="/default-image.png" />
+      <Hero
+        title="Life: on the brink"
+        isHome
+        backgroundImage="/default-image.png"
+      />
 
       <main className="main">
         <ContainerStyles align="center">
           <div className="content">
-            Bibendum dictumst faucibus imperdiet ullamcorper urna euismod
-            eleifend potenti sapien dolor, cubilia tempus diam rhoncus nisi
-            magnis orci posuere turpis, consequat ac massa sociosqu in curae nam
-            dis donec. Nisl velit nascetur porta vulputate luctus imperdiet
-            parturient dis morbi sit arcu, nam gravida donec turpis lacinia in
-            libero ornare vehicula sagittis dignissim, potenti malesuada
-            volutpat a accumsan blandit pellentesque egestas aliquam risus.
-            Bibendum cubilia nullam donec fermentum justo laoreet nunc
-            consectetur cum, suscipit risus eu class blandit maecenas auctor
-            scelerisque nisl, nec a hendrerit gravida tellus taciti fringilla
-            mus.
+            Have you ever wondered what drives someone to track kiwis in the
+            rain, chase lions up trees or jump on dugongs? Or with so many
+            different species, why it matters if a few of them go the way of the
+            Dodo? Well wonder no more! Join Gabe and Alex as they chat to
+            different conservationists and ask them the big questions: Why does
+            this species matter? What has been their best and worst day? And
+            what about these creatures makes deadly risk, soggy clothes, and
+            awkward bathroom situations worth it?
           </div>
           {allEpisodes && (
             <CardStyles>

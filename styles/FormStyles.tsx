@@ -33,14 +33,27 @@ const FormStyles = styled.form`
 
   textarea {
     resize: none;
+    min-height: 200px;
   }
 
-  input[type="submit"] {
+  button {
     cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
     font-weight: bold;
     background-color: var(--transparent);
+    border: 0;
+    border-radius: var(--borderRadius);
+    padding: 1rem;
     border: 3px solid var(--primaryColor);
-    transition: background-color 0.3s ease-in-out;
+    opacity: 1;
+    transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+    &.invalidForm {
+      cursor: default;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
 
     &:hover {
       background-color: var(--primaryColor);
