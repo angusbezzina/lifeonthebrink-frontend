@@ -25,14 +25,11 @@ export const AirtableSubmission = ({
         },
       },
     ],
-    (err, records) => {
+    (err) => {
       if (err) {
         console.error(err);
         return;
       }
-      records?.forEach((record) => {
-        console.log(record.getId());
-      });
     }
   );
 };
