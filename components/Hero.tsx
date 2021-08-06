@@ -5,16 +5,11 @@ interface HeroProps {
   date?: string;
   subtitle?: string;
   backgroundImage?: string;
-  isHome?: boolean
+  isHome?: boolean;
+  executeScroll?: () => void;
 }
 
-const Hero = ({ title, date, subtitle, backgroundImage, isHome = false }: HeroProps) => {
-  const scrollDown = () => {
-    window.scrollTo({
-      top: 500,
-      behavior: "smooth",
-    });
-  };
+const Hero = ({ title, date, subtitle, backgroundImage, isHome = false, executeScroll }: HeroProps) => {
   return (
     <HeroStyles backgroundImage={backgroundImage ?? ""} isHome={isHome}>
       <div className="heroContent">
@@ -22,7 +17,7 @@ const Hero = ({ title, date, subtitle, backgroundImage, isHome = false }: HeroPr
         <h6>{date}</h6>
         <h4>{subtitle}</h4>
       </div>
-      {isHome && <button type="button" className="heroScrollButton" onClick={() => scrollDown()}>Read more</button>}
+      {executeScroll && <button type="button" className="heroScrollButton" onClick={() => executeScroll()}>Read more</button>}
     </HeroStyles>
   );
 };

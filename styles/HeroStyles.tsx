@@ -8,7 +8,7 @@ interface HeroStylesProps {
 const HeroStyles = styled.div`
   position: relative;
   width: 100%;
-  height: ${(props: HeroStylesProps) => (props.isHome ? "60vh" : "50vh")};
+  height: 70vh;
   min-height: 15rem;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@ const HeroStyles = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    height: ${(props: HeroStylesProps) => (props.isHome ? "90vh" : "60vh")};
+    height: ${(props: HeroStylesProps) => (props.isHome ? "90vh" : "75vh")};
     min-height: 25rem;
   }
 
@@ -47,6 +47,7 @@ const HeroStyles = styled.div`
   }
 
   .heroScrollButton {
+    display: none;
     position: absolute;
     bottom: 3rem; 
     right: 3rem;
@@ -58,6 +59,10 @@ const HeroStyles = styled.div`
     border-radius: var(--borderRadius);
     padding: 0.25rem 1rem;
     transition: background-color 0.3s ease-in-out;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
 
     &:hover {
       background-color: var(--primaryColor);
