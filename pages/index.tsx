@@ -29,7 +29,7 @@ export default function Home({ allEpisodes }: HomePageProps) {
   return (
     <Page>
       <Hero
-        title="Life: on the brink"
+        title="LIFE ON THE BRINK"
         isHome
         backgroundImage="/default-image.png"
         executeScroll={executeScroll}

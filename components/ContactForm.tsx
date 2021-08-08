@@ -91,7 +91,6 @@ export default function ContactForm({ title }: ContactFormProps) {
   };
 
   const submitData = (token: any) => {
-    console.log(token);
     // call a backend API to verify reCAPTCHA response
     fetch("/api/recaptcha", {
       method: "POST",
@@ -106,12 +105,40 @@ export default function ContactForm({ title }: ContactFormProps) {
       }),
     })
       .then((res) => res.json())
-      .then((res) => {
+      .then((res: any) => {
         console.log(res);
+        if (res.success) {
+          AirtableSubmission({ name, email, message})
+            .then((res) => {
+              setSubmissionMessage(
+                `Thanks for your message ${name}! we'll be in touch soon 😁`
+              );
+              reset({
+                name: "",
+                email: "",
+                message: "",
+              });
+            })
+            .catch((err) => {
+              console.error(err);
+              setSubmissionMessage(
+                `We're sorry ${name}, it looks like something has gone wrong 😔`
+              );
+            });
+        }
+
+        if (!res.success) {
+          setSubmissionMessage(
+            `We're sorry ${name}, it looks like something has gone wrong 😔`
+          );
+        }
+
+        reset({
+          name: "",
+          email: "",
+          message: "",
+        });
       });
-    // fetch("/api/recaptcha")
-    //   .then((res) => res.text())
-    //   .then((body) => console.log(body));
   };
 
   return (

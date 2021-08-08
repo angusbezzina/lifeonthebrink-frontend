@@ -11,7 +11,7 @@
   --quaternaryColor: #e2f2dc;
   --boxShadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
   --borderRadius: 0.5rem;
-  --fontFamilyBase: -apple-system, 'Nunito', sans-serif;
+  --fontFamilyBase: -apple-system, "Montserrat", sans-serif;
 }
 
 * {
@@ -23,7 +23,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--fontFamilyBase);
+  font-weight: 200;
   font-size: 16px;
+  line-height: 1.6;
   color: var(--offBlack);
   background-color: var(--primaryColor);
 }
@@ -40,18 +42,22 @@ h5,
 h6 {
   margin-bottom: 1.25rem;
   line-height: 1.2;
+  font-weight: 200;
 }
 
 h1 {
   font-size: 2rem;
+  text-transform: uppercase;
 }
 
 h2 {
   font-size: 1.75rem;
+  text-transform: uppercase;
 }
 
 h3 {
   font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 h4 {
@@ -89,9 +95,13 @@ a:active {
   transition: color 0.3s ease-in-out;
 }
 
+.grecaptcha-badge {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   h2 {

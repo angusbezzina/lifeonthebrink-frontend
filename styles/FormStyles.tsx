@@ -20,6 +20,7 @@ const FormStyles = styled.form`
     padding: 1rem;
     color: var(--offBlack);
     font-family: var(--fontFamilyBase);
+    font-weight: 200; 
     font-size: 1rem;
     background: none;
     background-color: var(--primaryColor);
@@ -41,7 +42,6 @@ const FormStyles = styled.form`
     cursor: pointer;
     width: 100%;
     font-size: 1rem;
-    font-weight: bold;
     background-color: var(--transparent);
     border: 0;
     border-radius: var(--borderRadius);

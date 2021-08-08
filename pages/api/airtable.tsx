@@ -8,7 +8,7 @@ type AirtableProps = {
   message: string;
 };
 
-export const AirtableSubmission = ({
+export const AirtableSubmission = async ({
   name,
   email,
   message
@@ -16,6 +16,8 @@ export const AirtableSubmission = ({
   const base = new Airtable({
     apiKey: AIRTABLE.API_KEY,
   }).base(AIRTABLE.BASE_ID);
+
+  console.log('airtable', name, email, message);
 
   base(AIRTABLE.BASE_NAME).create(
     [
