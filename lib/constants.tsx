@@ -8,6 +8,15 @@ export const API_URL =
 
 export const PODCAST_XML_FEED = "https://anchor.fm/s/61790d40/podcast/rss";
 
+export const GTM_MANAGER = process.env.NEXT_PUBLIC_GTM_MANAGER ?? "";
+export const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? '';
+
+export const AIRTABLE = {
+  API_KEY: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY ?? "",
+  BASE_ID: process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID ?? "",
+  BASE_NAME: process.env.NEXT_PUBLIC_AIRTABLE_BASE_NAME ?? "",
+};
+
 export const hosts = [
   {
     name: "Alex",

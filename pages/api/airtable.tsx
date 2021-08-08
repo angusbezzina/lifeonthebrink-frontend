@@ -1,5 +1,7 @@
 import Airtable from "airtable";
 
+import { AIRTABLE } from 'lib/constants';
+
 type AirtableProps = {
   name: string;
   email: string;
@@ -12,10 +14,10 @@ export const AirtableSubmission = ({
   message
 }: AirtableProps) => {
   const base = new Airtable({
-    apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,
-  }).base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID ?? "");
+    apiKey: AIRTABLE.API_KEY,
+  }).base(AIRTABLE.BASE_ID);
 
-  base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_NAME ?? "").create(
+  base(AIRTABLE.BASE_NAME).create(
     [
       {
         fields: {
