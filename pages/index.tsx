@@ -1,16 +1,17 @@
+import React, { useRef } from "react";
 import moment from "moment";
 
 import Meta from "components/Meta";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import ContactForm from "components/ContactForm";
-
+import Hero from "components/Hero";
 import { getAllEpisodes, Episode } from "api/podcastRss";
+
 import PageStyles from "styles/PageStyles";
 import CardStyles from "styles/CardStyles";
 import ContainerStyles from "styles/ContainerStyles";
 import { PodcastList, PodcastListItem } from "styles/PodcastStyles";
-import Hero from "components/Hero";
 
 interface HomePageProps {
   allEpisodes?: [Episode];
@@ -18,6 +19,16 @@ interface HomePageProps {
 }
 
 export default function Home({ allEpisodes }: HomePageProps) {
+  const body = useRef<HTMLInputElement>(null);
+  const executeScroll = () => {
+    if (body.current !== null) {
+      body.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <PageStyles>
       <Meta />
@@ -27,9 +38,10 @@ export default function Home({ allEpisodes }: HomePageProps) {
         title="Life: on the brink"
         isHome
         backgroundImage="/default-image.png"
+        executeScroll={executeScroll}
       />
 
-      <main className="main">
+      <main className="main" ref={body}>
         <ContainerStyles align="center">
           <div className="content">
             Have you ever wondered what drives someone to track kiwis in the

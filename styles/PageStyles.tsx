@@ -11,8 +11,7 @@ const PageStyles = styled.div`
   .main {
     width: 100%;
     max-width: 1200px;
-    margin: 3rem auto;
-    padding: 0 0 2rem;
+    padding: 3rem 0 2rem;
     flex: 1;
     display: flex;
     flex-direction: column;

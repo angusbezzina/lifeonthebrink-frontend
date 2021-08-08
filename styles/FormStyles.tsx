@@ -16,7 +16,7 @@ const FormStyles = styled.form`
   textarea {
     display: block;
     width: 100%;
-    margin: 1rem 0;
+    margin: 1rem 0 0;
     padding: 1rem;
     color: var(--offBlack);
     font-family: var(--fontFamilyBase);
@@ -34,6 +34,7 @@ const FormStyles = styled.form`
   textarea {
     resize: none;
     min-height: 200px;
+    margin-bottom: 0;
   }
 
   button {
@@ -44,15 +45,22 @@ const FormStyles = styled.form`
     background-color: var(--transparent);
     border: 0;
     border-radius: var(--borderRadius);
-    padding: 1rem;
-    border: 3px solid var(--primaryColor);
     opacity: 1;
-    transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    max-height: none;
+    transition: background-color 0.3s ease-in-out, max-height 0.3s ease-in-out;
 
     &.invalidForm {
       cursor: default;
+      max-height: 0;
+      padding: 0;
       opacity: 0;
-      transition: opacity 0.3s ease-in-out;
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    &:not(.invalidForm) {
+      margin-top: 1rem;
+      padding: 1rem;
+      border: 3px solid var(--primaryColor);
     }
 
     &:hover {
