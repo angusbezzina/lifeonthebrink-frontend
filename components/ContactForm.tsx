@@ -68,8 +68,7 @@ export default function ContactForm({ title }: ContactFormProps) {
 
   const submitData = (token: any) => {
     const { name, email, message } = getValues();
-    console.log(name, email, message);
-
+    
     fetch("/api/recaptcha", {
       method: "POST",
       headers: {
