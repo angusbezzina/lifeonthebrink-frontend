@@ -41,7 +41,9 @@ const FormStyles = styled.form`
   button {
     cursor: pointer;
     width: 100%;
-    font-size: 1rem;
+    font-family: var(--fontFamilyBase);
+    font-weight: 200;
+    font-size: 1.25rem;
     background-color: var(--transparent);
     border: 0;
     border-radius: var(--borderRadius);
