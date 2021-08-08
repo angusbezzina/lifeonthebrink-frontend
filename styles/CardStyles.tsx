@@ -16,7 +16,7 @@ const CardStyles = styled.div`
 
   @media screen and (min-width: 768px) {
     ${(props: CardStylesProps) => (props.flex ? `display: flex;` : "")};
-    margin: 0 0 2rem;
+    margin: 0 0 4rem;
 
     &:last-child {
       margin: 0;

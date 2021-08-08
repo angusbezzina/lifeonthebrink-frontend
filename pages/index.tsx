@@ -1,14 +1,11 @@
 import React, { useRef } from "react";
 import moment from "moment";
 
-import Meta from "components/Meta";
-import Header from "components/Header";
-import Footer from "components/Footer";
 import ContactForm from "components/ContactForm";
 import Hero from "components/Hero";
-import { getAllEpisodes, Episode } from "api/podcastRss";
+import { getAllEpisodes, Episode } from "pages/api/podcastRss";
+import Page from "components/Page";
 
-import PageStyles from "styles/PageStyles";
 import CardStyles from "styles/CardStyles";
 import ContainerStyles from "styles/ContainerStyles";
 import { PodcastList, PodcastListItem } from "styles/PodcastStyles";
@@ -30,10 +27,7 @@ export default function Home({ allEpisodes }: HomePageProps) {
   };
 
   return (
-    <PageStyles>
-      <Meta />
-      <Header />
-
+    <Page>
       <Hero
         title="Life: on the brink"
         isHome
@@ -77,8 +71,7 @@ export default function Home({ allEpisodes }: HomePageProps) {
           <ContactForm title="Get in touch" />
         </ContainerStyles>
       </main>
-      <Footer />
-    </PageStyles>
+    </Page>
   );
 }
 

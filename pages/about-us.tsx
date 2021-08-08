@@ -2,25 +2,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faGlobe } from "@fortawesome/free-solid-svg-icons";
 
-import Meta from "components/Meta";
-import Header from "components/Header";
-import Hero from "components/Hero";
-import Footer from "components/Footer";
+import Page from 'components/Page';
+import Hero from 'components/Hero';
 
 import { hosts } from 'lib/constants';
 
-import PageStyles from "styles/PageStyles";
 import ContainerStyles from "styles/ContainerStyles";
 import CardStyles from "styles/CardStyles";
 
 export default function Home() {
   return (
-    <PageStyles>
-      <Meta />
-      <Header />
-
+    <Page>
       <Hero title="About Us" backgroundImage="/alternate-image.png" />
-
+      
       <main className="main">
         <ContainerStyles align="center">
           {hosts.map((host, index) => {
@@ -70,7 +64,6 @@ export default function Home() {
           })}
         </ContainerStyles>
       </main>
-      <Footer />
-    </PageStyles>
+    </Page>
   );
 }
