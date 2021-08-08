@@ -1,6 +1,6 @@
 import Airtable from "airtable";
 
-import { AIRTABLE } from 'lib/constants';
+import { AIRTABLE } from "lib/constants";
 
 type AirtableProps = {
   name: string;
@@ -8,10 +8,10 @@ type AirtableProps = {
   message: string;
 };
 
-export const AirtableSubmission = ({
+export const AirtableSubmission = async ({
   name,
   email,
-  message
+  message,
 }: AirtableProps) => {
   const base = new Airtable({
     apiKey: AIRTABLE.API_KEY,

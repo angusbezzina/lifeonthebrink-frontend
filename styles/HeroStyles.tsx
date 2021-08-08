@@ -18,7 +18,7 @@ const HeroStyles = styled.div`
     `background-image: url(${props.backgroundImage});
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; background-attachment: fixed;`};
+    background-position: center bottom; background-attachment: fixed;`};
   ${(props: HeroStylesProps) =>
     !props.backgroundImage ? "background-color: var(--secondaryColor)" : ""};
   color: ${(props: HeroStylesProps) =>
@@ -38,6 +38,7 @@ const HeroStyles = styled.div`
   @media screen and (min-width: 768px) {
     height: ${(props: HeroStylesProps) => (props.isHome ? "90vh" : "75vh")};
     min-height: 25rem;
+    background-position: center;
   }
 
   .heroContent,
@@ -49,11 +50,10 @@ const HeroStyles = styled.div`
   .heroScrollButton {
     display: none;
     position: absolute;
-    bottom: 3rem; 
+    bottom: 3rem;
     right: 3rem;
     cursor: pointer;
     font-family: var(--fontFamilyBase);
-    font-weight: bold;
     background-color: var(--white);
     border: 3px solid var(--primaryColor);
     border-radius: var(--borderRadius);
