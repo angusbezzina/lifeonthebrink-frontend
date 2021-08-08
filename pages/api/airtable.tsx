@@ -17,6 +17,8 @@ export const AirtableSubmission = async ({
     apiKey: AIRTABLE.API_KEY,
   }).base(AIRTABLE.BASE_ID);
 
+  console.log('airtable', name, email, message);
+
   base(AIRTABLE.BASE_NAME).create(
     [
       {

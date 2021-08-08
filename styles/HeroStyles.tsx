@@ -18,7 +18,7 @@ const HeroStyles = styled.div`
     `background-image: url(${props.backgroundImage});
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center bottom; background-attachment: fixed;`};
+    background-position: center bottom;`};
   ${(props: HeroStylesProps) =>
     !props.backgroundImage ? "background-color: var(--secondaryColor)" : ""};
   color: ${(props: HeroStylesProps) =>
@@ -39,6 +39,7 @@ const HeroStyles = styled.div`
     height: ${(props: HeroStylesProps) => (props.isHome ? "90vh" : "75vh")};
     min-height: 25rem;
     background-position: center;
+    background-attachment: fixed;
   }
 
   .heroContent,
