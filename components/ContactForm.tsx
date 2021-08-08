@@ -28,7 +28,6 @@ export default function ContactForm({ title }: ContactFormProps) {
     getValues,
     formState: { errors, isValid },
   } = useForm<Inputs>({ mode: "onChange" });
-  const { name, email, message } = getValues();
 
   useEffect(() => {
     const loadScriptByURL = (id: string, url: string, callback: any) => {
@@ -68,6 +67,9 @@ export default function ContactForm({ title }: ContactFormProps) {
   };
 
   const submitData = (token: any) => {
+    const { name, email, message } = getValues();
+    console.log(name, email, message);
+
     fetch("/api/recaptcha", {
       method: "POST",
       headers: {
