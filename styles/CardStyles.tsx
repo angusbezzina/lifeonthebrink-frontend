@@ -14,12 +14,20 @@ const CardStyles = styled.div`
   border-radius: var(--borderRadius);
   box-shadow: var(--boxShadow);
 
+  &.podcastList {
+    padding: 2rem 1rem;
+  }
+
   @media screen and (min-width: 768px) {
     ${(props: CardStylesProps) => (props.flex ? `display: flex;` : "")};
     margin: 0 0 4rem;
 
     &:last-child {
       margin: 0;
+    }
+
+    &.podcastList {
+      padding: 2rem;
     }
   }
 

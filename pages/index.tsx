@@ -48,7 +48,7 @@ export default function Home({ allEpisodes }: HomePageProps) {
             awkward bathroom situations worth it?
           </div>
           {allEpisodes && (
-            <CardStyles>
+            <CardStyles className="podcastList">
               <h2 className="featureTitle">Latest shows</h2>
               <PodcastList>
                 {allEpisodes.map((item: Episode, index: number) => {
