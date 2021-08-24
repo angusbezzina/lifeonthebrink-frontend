@@ -53,7 +53,6 @@ const Header = () => {
           {/* <Link href="/blog">
             <a>Blog</a>
           </Link> */}
-          {/* Episode 3 */}
         </NavStyles>
       </ContainerStyles>
     </HeaderStyles>
