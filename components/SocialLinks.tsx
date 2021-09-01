@@ -19,15 +19,30 @@ const SocialLinks = () => {
       >
         <FontAwesomeIcon icon={faInstagram} />
       </a>
-      {/* <a href="" title="twitter" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://twitter.com/aLifeOnTheBrink"
+        title="twitter"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FontAwesomeIcon icon={faTwitter} />
       </a>
-      <a href="" title="facebook" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://www.facebook.com/lifeonthebrinkpodcast"
+        title="facebook"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FontAwesomeIcon icon={faFacebook} />
       </a>
-      <a href="" title="youtube" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://www.youtube.com/channel/UCF8L6kx2eIs46Z5OIGNArrQ"
+        title="youtube"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FontAwesomeIcon icon={faYoutube} />
-      </a> */}
+      </a>
     </SocialLinkStyles>
   );
 };

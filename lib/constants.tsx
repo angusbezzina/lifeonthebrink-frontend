@@ -35,6 +35,7 @@ export const hosts = [
     social: {
       linkedin: "linkedin.com/in/gabeporritt",
       email: "ausgabegeorge@gmail.com",
+      website: "https://gabriel.soilandsea.com.au",
     },
   },
 ];
