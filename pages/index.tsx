@@ -86,5 +86,6 @@ export async function getStaticProps() {
 
   return {
     props: { allEpisodes },
+    revalidate: 1,
   };
 }
